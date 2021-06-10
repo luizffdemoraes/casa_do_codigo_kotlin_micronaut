@@ -15,6 +15,9 @@ class DeletaAutorController(val autorRepository: AutorRepository) {
             return HttpResponse.notFound()
         }
 
+        //Outra opção
+//        autorRepository.deleteById(id)
+
         val autor = possivelAutor.get()
         autorRepository.delete(autor)
 
