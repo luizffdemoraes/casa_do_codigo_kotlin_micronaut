@@ -24,4 +24,6 @@ class CadastraAutorController(@Inject val autorRepository: AutorRepository) {
         println("Autor => ${autor.nome}")
 
     }
+
+
 }
