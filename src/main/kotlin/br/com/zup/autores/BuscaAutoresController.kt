@@ -34,7 +34,11 @@ class BuscaAutoresController(@Inject val autorRepository: AutorRepository) {
         }
 
         // Ir no banco de dados e realizar a busca dado um email
-        val possivelAutor = autorRepository.findByEmail(email)
+        // -> Writing Queries
+//        val possivelAutor = autorRepository.findByEmail(email)
+
+        // -> Explicit Queries
+        val possivelAutor = autorRepository.buscaPorEmail(email)
 
         if (possivelAutor.isEmpty) {
             return HttpResponse.notFound()
