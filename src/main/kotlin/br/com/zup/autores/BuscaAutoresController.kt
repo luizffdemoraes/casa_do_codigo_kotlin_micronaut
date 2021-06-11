@@ -7,6 +7,7 @@ import io.micronaut.http.annotation.Get
 import io.micronaut.http.annotation.QueryValue
 
 import javax.inject.Inject
+import javax.transaction.Transactional
 
 @Controller("/autores")
 class BuscaAutoresController(@Inject val autorRepository: AutorRepository) {
@@ -20,8 +21,12 @@ class BuscaAutoresController(@Inject val autorRepository: AutorRepository) {
     -> Passar parametro na Query autores?email=rafael.ponta@zup.com.br
     precisamos informar um valor default = "" caso contrario
     sempre solicitará no momento da requisição na URI
+
+     @Transactional - ao utilizar essa anotação e aberto uma transação com banco de dados e
+     após executar o metodo e fechado a transação.
      */
     @Get
+    @Transactional
     fun lista(@QueryValue(defaultValue = "") email: String): HttpResponse<Any> {
 
         if (email.isBlank()) {

@@ -8,6 +8,7 @@ import io.micronaut.http.uri.UriBuilder
 import io.micronaut.validation.Validated
 
 import javax.inject.Inject
+import javax.transaction.Transactional
 import javax.validation.Valid
 
 @Validated
@@ -20,6 +21,7 @@ class CadastraAutorController(@Inject val autorRepository: AutorRepository) {
     de corpo generico
     */
     @Post
+    @Transactional
     fun cadastra(@Body @Valid request: NovoAutorRequest): HttpResponse<Any> {
 
         //request => domínio

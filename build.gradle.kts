@@ -7,6 +7,10 @@ plugins {
     id("org.jetbrains.kotlin.plugin.jpa") version "1.4.32"
 }
 
+// -> Em momento de compilação toda classe com @Controller e para deixar open
+allOpen {
+    annotation("io.micronaut.http.annotation.Controller")
+}
 
 version = "0.1"
 group = "br.com.zup"

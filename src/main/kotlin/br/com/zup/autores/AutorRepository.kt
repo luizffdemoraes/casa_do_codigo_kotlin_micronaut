@@ -11,8 +11,8 @@ interface AutorRepository: JpaRepository<Autor, Long> {
   // -> Writing Queries
   fun findByEmail(email: String): Optional<Autor>
 
-  // -> Explicit Queries
-  @Query("SELECT a FROM Autor a WHERE a.email = :email", nativeQuery = true)
+  // -> Explicit Queries - removido estava gerando erro , nativeQuery = true
+  @Query("SELECT a FROM Autor a WHERE a.email = :email")
   fun buscaPorEmail(email: String) : Optional<Autor>
 
 }
