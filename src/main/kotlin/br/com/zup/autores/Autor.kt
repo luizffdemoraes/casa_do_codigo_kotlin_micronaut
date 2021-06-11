@@ -10,7 +10,8 @@ import javax.persistence.Id
 class Autor(
     val nome: String,
     val email: String,
-    var descricao: String){
+    var descricao: String,
+    val endereco: Endereco){
 
     //Não vai passar pelo construtor
     @Id

@@ -18,4 +18,5 @@ jpa:
         show_sql: true
         hbm2ddl.auto: update
 
-cep.host: https://viacep.com.br/ws/
+cep:
+  url: https://viacep.com.br/ws/
