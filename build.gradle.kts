@@ -46,7 +46,7 @@ dependencies {
 
     // POSTGRESQL - Hikari e JPA já foram declarados
     implementation("org.postgresql:postgresql:42.2.18")
-
+    // Poder converter, serialization e deserialization objetos para XML
     implementation("io.micronaut.xml:micronaut-jackson-xml")
 
 
