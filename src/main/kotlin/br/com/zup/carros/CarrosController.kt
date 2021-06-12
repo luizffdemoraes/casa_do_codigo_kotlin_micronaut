@@ -12,8 +12,8 @@ import javax.validation.Valid
 class CarrosController {
 
     @Post("/api/carros")
-    fun criar(@Body @Valid carro: Carro): HttpResponse<Any>{
-        return  HttpResponse.ok(carro)
+    fun criar(@Body @Valid carroRequest: CarroRequest): HttpResponse<Any>{
+        return  HttpResponse.ok(carroRequest)
     }
 
 
