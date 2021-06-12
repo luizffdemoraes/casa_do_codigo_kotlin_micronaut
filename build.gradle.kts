@@ -49,6 +49,14 @@ dependencies {
     // Poder converter, serialization e deserialization objetos para XML
     implementation("io.micronaut.xml:micronaut-jackson-xml")
 
+    //Testes
+    testAnnotationProcessor("io.micronaut:micronaut-inject-java")
+    testImplementation("io.micronaut:micronaut-http-client")
+    testImplementation("org.junit.jupiter:junit-jupiter-api")
+    testImplementation("org.mockito:mockito-core:3.8.0")
+    testImplementation("io.micronaut.test:micronaut-test-junit5:2.3.5")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.7.0")
+    testImplementation("com.h2database:h2")
 
 
 }
